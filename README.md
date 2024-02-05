@@ -1,85 +1,68 @@
-<!-- Copyright Vespa.ai. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root. -->
-
-[![#Vespa](https://vespa.ai/assets/vespa-logo-color.png)](https://vespa.ai)
-
-Search, make inferences in, and organize vectors, tensors, text and structured data, at serving time and any scale.
-
-This repository contains all the code required to build and run all of Vespa yourself,
-and where you can see all development as it is happening.
-All the content in this repository is licensed under the Apache 2.0 license.
-
-A new release of Vespa is made from this repository's master branch every morning CET Monday through Thursday.
-Build status: [![Vespa Build Status](https://api.screwdriver.cd/v4/pipelines/6386/build-vespa/badge)](https://cd.screwdriver.cd/pipelines/6386)
-
-- Home page: [https://vespa.ai](https://vespa.ai)
-- Documentation: [https://docs.vespa.ai](https://docs.vespa.ai)
-- Continuous build: [https://factory.vespa.oath.cloud](https://factory.vespa.oath.cloud)
-- Run applications in the cloud for free: [https://cloud.vespa.ai](https://cloud.vespa.ai)
-
-## Table of contents
-
-- [Background](#background)
-- [Install](#install)
-- [Usage](#usage)
-- [Contribute](#contribute)
-- [Building](#building)
-- [License](#license)
-
-## Background
-
-Use cases such as search, recommendation and personalization need to select a subset of data in a large corpus,
-evaluate machine-learned models over the selected data, organize and aggregate it and return it, typically in less
-than 100 milliseconds, all while the data corpus is continuously changing.
-
-This is hard to do, especially with large data sets that needs to be distributed over multiple nodes and evaluated in
-parallel. Vespa is a platform which performs these operations for you with high availability and performance.
-It has been in development for many years and is used on a number of large internet services and apps which serve
-hundreds of thousands of queries from Vespa per second.
-
-## Install
-
-Deploy your Vespa applications to the cloud service: [https://cloud.vespa.ai](https://cloud.vespa.ai),
-or run your own Vespa instance: [https://docs.vespa.ai/en/getting-started.html](https://docs.vespa.ai/en/getting-started.html)
-
-## Usage
-
-- The application created in the getting started guides linked above are fully functional and production ready, but you may want to [add more nodes](https://docs.vespa.ai/en/multinode-systems.html) for redundancy.
-- See [developing applications](https://docs.vespa.ai/en/developer-guide.html) on adding your own Java components to your Vespa application.
-- [Vespa APIs](https://docs.vespa.ai/en/api.html) is useful to understand how to interface with Vespa
-- Explore the [sample applications](https://github.com/vespa-engine/sample-apps/tree/master)
-- Follow the [Vespa Blog](https://blog.vespa.ai/) for feature updates / use cases
-
-Full documentation is at [https://docs.vespa.ai](https://docs.vespa.ai).
-
-## Contribute
-
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) to learn how to contribute.
-
-If you want to contribute to the documentation, see
-[https://github.com/vespa-engine/documentation](https://github.com/vespa-engine/documentation)
-
-## Building
-
-You do not need to build Vespa to use it, but if you want to contribute you need to be able to build the code.
-This section explains how to build and test Vespa. To understand where to make changes, see [Code-map.md](Code-map.md).
-Some suggested improvements with pointers to code are in [TODO.md](TODO.md).
-
-### Development environment
-
-C++ and Java building is supported on AlmaLinux 8.
-The Java source can also be built on any platform having Java 17 and Maven installed.
-Use the following guide to set up a complete development environment using Docker
-for building Vespa, running unit tests and running system tests:
-[Vespa development on AlmaLinux 8](https://github.com/vespa-engine/docker-image-dev#vespa-development-on-almalinux-8).
-
-### Build Java modules
-
-    export MAVEN_OPTS="-Xms128m -Xmx1024m"
-    ./bootstrap.sh java
-    mvn install --threads 1C
-
-Use this if you only need to build the Java modules, otherwise follow the complete development guide above.
-
-## License
-
-Code licensed under the Apache 2.0 license. See [LICENSE](LICENSE) for terms.
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text">
+<themed-picture data-catalyst-inline="true" data-catalyst=""><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://camo.githubusercontent.com/26675eb198055af989d8db464676cade028f659086d35c00fb7dfbec47135d62/68747470733a2f2f76657370612e61692f6173736574732f76657370612d61692d6c6f676f2d686561746865722e737667" data-canonical-src="https://vespa.ai/assets/vespa-ai-logo-heather.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://camo.githubusercontent.com/a06d4f0acf0bdc8e79bdb6e6867a15a1a10f39538f73c10a76dd0178a8d815f2/68747470733a2f2f76657370612e61692f6173736574732f76657370612d61692d6c6f676f2d726f636b2e737667" data-canonical-src="https://vespa.ai/assets/vespa-ai-logo-rock.svg">
+  <img alt="#韦斯帕" width="200" src="https://camo.githubusercontent.com/a06d4f0acf0bdc8e79bdb6e6867a15a1a10f39538f73c10a76dd0178a8d815f2/68747470733a2f2f76657370612e61692f6173736574732f76657370612d61692d6c6f676f2d726f636b2e737667" style="visibility:visible;max-width:100%;" data-canonical-src="https://vespa.ai/assets/vespa-ai-logo-rock.svg">
+</picture></themed-picture>
+<br><br>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在服务时间和任何规模下搜索、推理和组织向量、张量、文本和结构化数据。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该存储库包含您自己构建和运行所有 Vespa 所需的所有代码，并且您可以在其中看到所有正在发生的开发。此存储库中的所有内容均根据 Apache 2.0 许可证获得许可。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vespa 的新版本是在欧洲中部时间周一到周四每天早上从该存储库的主分支发布的。构建状态：</font></font><a href="https://cd.screwdriver.cd/pipelines/6386" rel="nofollow"><img src="https://camo.githubusercontent.com/6675637bfa1b6264e2aa830c2f7d167e4e43b2268b556424625e65ba2edf7fac/68747470733a2f2f6170692e73637265776472697665722e63642f76342f706970656c696e65732f363338362f6275696c642d76657370612f6261646765" alt="Vespa 构建状态" data-canonical-src="https://api.screwdriver.cd/v4/pipelines/6386/build-vespa/badge" style="max-width: 100%;"></a></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">主页：https: </font></font><a href="https://vespa.ai" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">//vespa.ai</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档： https: </font></font><a href="https://docs.vespa.ai" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">//docs.vespa.ai</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">持续构建： https: </font></font><a href="https://factory.vespa.oath.cloud" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">//factory.vespa.oath.cloud</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">免费在云中运行应用程序： https: </font></font><a href="https://cloud.vespa.ai" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">//cloud.vespa.ai</font></font></a></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-table-of-contents" class="anchor" aria-hidden="true" tabindex="-1" href="#table-of-contents"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">目录</font></font></h2>
+<ul dir="auto">
+<li><a href="#background"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">背景</font></font></a></li>
+<li><a href="#install"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装</font></font></a></li>
+<li><a href="#usage"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用法</font></font></a></li>
+<li><a href="#contribute"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></a></li>
+<li><a href="#building"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">建筑</font></font></a></li>
+<li><a href="#license"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">执照</font></font></a></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-background" class="anchor" aria-hidden="true" tabindex="-1" href="#background"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">背景</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">搜索、推荐和个性化等用例需要在大型语料库中选择数据子集，根据所选数据评估机器学习模型，组织和聚合数据并返回它，通常在 100 毫秒内完成，同时数据语料库在不断变化。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这是很难做到的，特别是对于需要分布在多个节点上并并行评估的大型数据集。 Vespa 是一个以高可用性和高性能为您执行这些操作的平台。它已经开发多年，并用于许多大型互联网服务和应用程序，每秒处理来自 Vespa 的数十万次查询。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-install" class="anchor" aria-hidden="true" tabindex="-1" href="#install"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">将您的 Vespa 应用程序部署到云服务：</font></font><a href="https://cloud.vespa.ai" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://cloud.vespa.ai</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，或运行您自己的 Vespa 实例： https: </font></font><a href="https://docs.vespa.ai/en/getting-started.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">//docs.vespa.ai/en/getting-started.html</font></font></a></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-usage" class="anchor" aria-hidden="true" tabindex="-1" href="#usage"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用法</font></font></h2>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在上面链接的入门指南中创建的应用程序功能齐全，可以投入生产，但您可能需要</font></font><a href="https://docs.vespa.ai/en/multinode-systems.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">添加更多节点</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以实现冗余。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请参阅</font></font><a href="https://docs.vespa.ai/en/developer-guide.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发应用程序</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，了解如何将您自己的 Java 组件添加到您的 Vespa 应用程序中。</font></font></li>
+<li><a href="https://docs.vespa.ai/en/api.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vespa API</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于了解如何与 Vespa 交互非常有用</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">探索</font></font><a href="https://github.com/vespa-engine/sample-apps/tree/master"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">示例应用程序</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">关注</font></font><a href="https://blog.vespa.ai/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vespa 博客</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以获取功能更新/用例</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">完整文档位于</font></font><a href="https://docs.vespa.ai" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://docs.vespa.ai</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-contribute" class="anchor" aria-hidden="true" tabindex="-1" href="#contribute"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们欢迎贡献！请参阅</font></font><a href="/vespa-engine/vespa/blob/master/CONTRIBUTING.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CONTRIBUTING.md</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">了解如何贡献。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想为文档做出贡献，请参阅
+</font></font><a href="https://github.com/vespa-engine/documentation"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://github.com/vespa-engine/documentation</font></font></a></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-building" class="anchor" aria-hidden="true" tabindex="-1" href="#building"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">建筑</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您无需构建 Vespa 即可使用它，但如果您想做出贡献，则需要能够构建代码。本节介绍如何构建和测试 Vespa。要了解在哪里进行更改，请参阅</font></font><a href="/vespa-engine/vespa/blob/master/Code-map.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Code-map.md</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font><a href="/vespa-engine/vespa/blob/master/TODO.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TODO.md</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中提供了一些关于代码指针的改进建议</font><font style="vertical-align: inherit;">。</font></font></p>
+<h3 tabindex="-1" dir="auto"><a id="user-content-development-environment" class="anchor" aria-hidden="true" tabindex="-1" href="#development-environment"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发环境</font></font></h3>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AlmaLinux 8 支持 C++ 和 Java 构建。Java 源代码也可以在安装了 Java 17 和 Maven 的任何平台上构建。使用以下指南使用 Docker 设置完整的开发环境来构建 Vespa、运行单元测试和运行系统测试：
+ </font></font><a href="https://github.com/vespa-engine/docker-image-dev#vespa-development-on-almalinux-8"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AlmaLinux 8 上的 Vespa 开发</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<h3 tabindex="-1" dir="auto"><a id="user-content-build-java-modules" class="anchor" aria-hidden="true" tabindex="-1" href="#build-java-modules"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构建 Java 模块</font></font></h3>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>export MAVEN_OPTS="-Xms128m -Xmx1024m"
+./bootstrap.sh java
+mvn install --threads 1C
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="export MAVEN_OPTS=&quot;-Xms128m -Xmx1024m&quot;
+./bootstrap.sh java
+mvn install --threads 1C" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您只需要构建 Java 模块，请使用此选项，否则请遵循上面的完整开发指南。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-license" class="anchor" aria-hidden="true" tabindex="-1" href="#license"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">执照</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代码根据 Apache 2.0 许可证获得许可。</font><font style="vertical-align: inherit;">有关条款，</font><font style="vertical-align: inherit;">请参阅</font></font><a href="/vespa-engine/vespa/blob/master/LICENSE"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">许可证。</font></font></a><font style="vertical-align: inherit;"></font></p>
+</article></div>
